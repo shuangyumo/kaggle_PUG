@@ -34,14 +34,20 @@ value:str
 cname:str
 '''
 # 统计特征
-def get_feat_stat_feat(train,base_feat,other_feat,stat_list=['min','max','var','size','mean','skew']):
-    name = ('_').join(base_feat) + '_' + ('_').join(other_feat) + '_' + ('_').join(stat_list)
-
-    agg_dict = {}
+def get_feat_stat_feat(train, base_feat, other_feat, stat_list):
+    '''
+    :param train:
+    :param base_feat: list
+    :param other_feat: list
+    :param stat_list: list
+    :return:
+    '''
+    result = pd.DataFrame()
     for stat in stat_list:
-        agg_dict[name+stat] = stat
-        result = train[base_feat + other_feat].groupby(base_feat)[",".join(other_feat)]\
-        .agg(agg_dict)
+        agg_dict = {name: stat for name in other_feat}
+        temp = train[base_feat + other_feat].groupby(base_feat)[other_feat].agg(agg_dict)
+        temp.columns = [col + '_' + stat for col in temp.columns]
+        result = pd.concat([result, temp], axis=1)
     return result
 
 def merge_count(df, columns, value, cname):

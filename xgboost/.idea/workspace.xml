@@ -22,26 +22,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="3" />
-          <entry key="py" value="29" />
+          <entry key="csv" value="4" />
+          <entry key="py" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="3" />
-          <entry key="Python" value="29" />
+          <entry key="CSV" value="4" />
+          <entry key="Python" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="py" value="1938" />
+          <entry key="py" value="2029" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="1938" />
+          <entry key="Python" value="2029" />
         </counts>
       </usages-collector>
     </session>
@@ -51,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xgb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1501">
+            <state relative-caret-position="703">
               <caret line="79" column="26" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="26" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+            <state relative-caret-position="641">
+              <caret line="45" selection-start-line="45" selection-end-line="53" selection-end-column="13" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
                 <marker date="1543662760826" expanded="true" signature="1537:1678" ph="..." />
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+            <state relative-caret-position="-741">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="36" />
               <folding>
                 <element signature="e#17#35#0" expanded="true" />
               </folding>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+            <state relative-caret-position="147">
+              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -115,18 +115,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/baseline.py" />
-        <option value="$USER_HOME$/Desktop/比赛集/通用代码包/xgb.py" />
         <option value="$PROJECT_DIR$/xgb.py" />
         <option value="$PROJECT_DIR$/laji.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$USER_HOME$/Desktop/比赛集/通用代码包/xgb.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/feature.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="88" />
+    <option name="x" value="160" />
+    <option name="y" value="249" />
     <option name="width" value="1469" />
     <option name="height" value="890" />
   </component>
@@ -243,14 +243,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="88" width="1349" height="890" extended-state="1" />
+    <frame x="160" y="249" width="1469" height="890" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14972848" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13697658" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.334214" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.334214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.46912244" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -275,16 +276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="4375" selection-start-line="4375" selection-end-line="4375" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/比赛集/通用代码包/xgb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="78" lean-forward="true" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-          <folding>
-            <element signature="e#169#209#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -339,20 +330,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$USER_HOME$/Desktop/比赛集/通用代码包/xgb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        <state relative-caret-position="247">
+          <caret line="133" column="82" selection-start-line="133" selection-start-column="82" selection-end-line="133" selection-end-column="82" />
           <folding>
-            <element signature="e#1#19#0" expanded="true" />
-            <marker date="1543662760826" expanded="true" signature="1537:1678" ph="..." />
+            <element signature="e#169#209#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/f1.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/xgb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
+        <state relative-caret-position="703">
           <caret line="79" column="26" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="26" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -362,18 +355,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        <state relative-caret-position="-741">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="36" />
           <folding>
             <element signature="e#17#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="45" selection-start-line="45" selection-end-line="53" selection-end-column="13" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+            <marker date="1543662760826" expanded="true" signature="1537:1678" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+        <state relative-caret-position="147">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
