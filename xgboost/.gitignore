@@ -1,0 +1,12 @@
+.idea/
+venv/
+sub/
+feature_importance/
+docs/build/
+docs/make.bat
+docs/Makefile
+*.pyc
+.pytest_cache/
+__pycache__
+*.pyc
+
