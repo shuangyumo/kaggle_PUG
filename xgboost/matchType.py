@@ -16,14 +16,18 @@ def encode_onehot(df,column_name):
     feature_df=pd.get_dummies(df[column_name], prefix=column_name)
     all = pd.concat([df.drop([column_name], axis=1),feature_df], axis=1)
     return all
-
+def encode_count(df,column_name):
+    lbl = preprocessing.LabelEncoder()
+    lbl.fit(list(df[column_name].values))
+    df[column_name] = lbl.transform(list(df[column_name].values))
+    return df
 #载入数据
-df = reload('../data/train_V2.csv', 100000)
+df = reload('../data/train_V2.csv', 10000)
 invalid_match_ids = df[df['winPlacePerc'].isna()]['matchId'].values
 df = df[-df['matchId'].isin(invalid_match_ids)]
 print(df.shape)
 
-test_df = reload('../data/test_V2.csv', 100000)
+test_df = reload('../data/test_V2.csv', 10000)
 test_df['winPlacePerc'] = -1
 
 print(test_df.shape)
@@ -43,18 +47,28 @@ df['killPoints']=df['killPoints']+rankPoints
 df.drop(columns=['rankPoints'], inplace=True, axis=1)
 
 print(df.columns)
-####处理matchtype
-####只考虑solo,solo-fpp
-df.loc[(df['matchType']=='solo')| (df['matchType']=='solo-fpp'),'matchType']=0
-####只考虑solo,
-# df=df.loc[(df['matchType']=='solo')]
-####只考虑duo,
-df.loc[(df['matchType']=='duo')| (df['matchType']=='duo-fpp'),'matchType']=1
-print(df.shape)
-df=df[(df['matchType']==1)|(df['matchType']==0)]
+# ####处理matchtype
+# ####只考虑solo,solo-fpp
+df.loc[(df['matchType']=='solo')| (df['matchType']=='solo-fpp')| (df['matchType']=='normal-solo-fpp')
+| (df['matchType']=='normal-solo'),'matchType']=0
+# ####只考虑solo,
+# # df=df.loc[(df['matchType']=='solo')]
+# ####只考虑duo,
+df.loc[(df['matchType']=='duo')| (df['matchType']=='duo-fpp')| (df['matchType']=='normal-duo-fpp')
+| (df['matchType']=='normal-duo'),'matchType']=1
+df.loc[(df['matchType']=='squad')|(df['matchType']=='squad-fpp')| (df['matchType']=='normal-squad-fpp')
+| (df['matchType']=='normal-squad'),'matchType']=2
+df.loc[(df['matchType']=='crashfpp')|(df['matchType']=='crashtpp'),'matchType']=3
+
+df.loc[(df['matchType']=='flarefpp')|(df['matchType']=='flaretpp'),'matchType']=3
+
+# print(df.shape)
+df=df[(df['matchType']==1)|(df['matchType']==0)|(df['matchType']==2)]
+# df=df[(df['matchType']==3)|(df['matchType']==4)]
+# df=encode_onehot(df,'matchType')
 print(df.shape)
 print(df.columns)
-df=encode_onehot(df,'matchType')
+
 
 
 ####把id,groupId,matchId去掉。
@@ -126,3 +140,12 @@ train_target.to_csv("baseline_50.csv",index=False)
 # cv_result [0.05195, 0.05228, 0.05177]
 # 0.04848745
 # 0.051766366
+#########所有的都加在一起，100000，
+# Fold  3 macro-f1 : 0.066414
+# cv_result [0.06791, 0.06682, 0.06641]
+####把flare 跟 crash 归并到fpp,10000
+# Fold  3 macro-f1 : 0.063989
+# cv_result [0.06636, 0.06758, 0.06399]
+#####把flare 跟crash 归为新的一类
+# Fold  3 macro-f1 : 0.064170
+# cv_result [0.06627, 0.06744, 0.06417]
