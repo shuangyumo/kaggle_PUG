@@ -18,13 +18,12 @@ def encode_onehot(df,column_name):
     return all
 
 #载入数据
-df = reload('../data/train_V2.csv', -1)
-# 去除为空的数据
+df = reload('../data/train_V2.csv', 10000)
 invalid_match_ids = df[df['winPlacePerc'].isna()]['matchId'].values
 df = df[-df['matchId'].isin(invalid_match_ids)]
 print(df.shape)
 
-test_df = reload('../data/test_V2.csv', -1)
+test_df = reload('../data/test_V2.csv', 10000)
 test_df['winPlacePerc'] = -1
 
 print(test_df.shape)
